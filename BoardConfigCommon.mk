@@ -28,6 +28,14 @@ BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_DTB_EXTRA_FLAGS := --force-v2
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-sm/bin
+KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
+GRAPHITE_OPTS := true
+
+# Rom Toolchain
+TARGET_GCC_VERSION_EXP := 4.8-sm
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
